@@ -3,7 +3,7 @@ import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration }
 import type { Route } from "./+types/root";
 
 // https://github.com/facebook/stylex/discussions/825#discussioncomment-11720866
-import "./stylex.css";
+import "./stylex/stylex.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
