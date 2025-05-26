@@ -7,23 +7,22 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
-    // React
+    // React + Babel
     react({
-      // Babel integration
       babel: {
-        //// babelrc: true,
-
-        // Make explicit connection to babel.config.cjs
+        // Make an explicit connection to babel.config.cjs
         // Note: Must use relative paths
         configFile: "./babel.config.cjs",
       },
     }),
+
+    // React Router
     reactRouter(), // Goes after react()
 
     // TypeScript
     tsconfigPaths(),
   ],
-  // PostCSS integration
+  // PostCSS
   css: {
     // Make an explicit connection to postcss.config.cjs
     // Note: Must use relative paths
