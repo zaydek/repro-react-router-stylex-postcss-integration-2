@@ -1,10 +1,10 @@
 import * as stylex from "@stylexjs/stylex";
-import { stylexConsts, stylexVars } from "../stylex/theme.stylex";
+import { consts, vars } from "../stylex/theme.stylex";
 import type { Route } from "./+types/home";
 
 const styles = stylex.create({
-  defineConsts: { color: stylexConsts.blue },
-  defineVars: { color: stylexVars.red },
+  defineConsts: { color: consts.blue },
+  defineVars: { color: vars.red },
 });
 
 export function meta({}: Route.MetaArgs) {

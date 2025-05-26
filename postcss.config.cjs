@@ -3,10 +3,22 @@ module.exports = {
   plugins: {
     "@stylexjs/postcss-plugin": {
       include: [
-        // Ensure StyleX files (e.g. *.ts, *.tsx) are preprocessed
-        "app/**/*.{js,jsx,ts,tsx}",
-        // Ensure StyleX static files (e.g. *.stylex.ts) are preprocessed
-        "app/**/*.{stylex.js,stylex.ts}",
+        // Ensure StyleX files are preprocessed
+        //
+        // Covers:
+        //
+        // - app/**/foo.ts
+        // - app/**/foo.tsx
+        //
+        "app/**/*.{ts,tsx}",
+
+        // Ensure StyleX static files are preprocessed
+        //
+        // Covers:
+        //
+        // - app/**/foo.stylex.ts
+        //
+        "app/**/*.stylex.ts",
       ],
       useCSSLayers: true, // Optional
     },
